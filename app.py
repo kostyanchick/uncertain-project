@@ -9,5 +9,10 @@ def index():
     return "ROAD TO 2K"
 
 
-if __name__ == '__main__':
+@app.route('/<name>')
+def hello_name(name):
+    return f"Hello {name}!"
+
+
+if __name__ == "__main__":
     app.run()
